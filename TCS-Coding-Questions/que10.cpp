@@ -21,7 +21,7 @@ int main(){
     cin>>L;
     vector<string> vec;
     
-    //generate substringa
+    //generate substrings and push them into map
     int i=0, j=L;
     string substring;
     map<string, int> mpp;
