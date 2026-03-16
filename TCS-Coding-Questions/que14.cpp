@@ -23,13 +23,15 @@ int main(){
 
     if (w < 2 * v || w > 4 * v || w % 2 != 0)
         cout<<"INVALID INPUT";
-        return 0;
     if (w % 2 == 0)
         {
-            tw = (w - 2 * v) / 2;
+            int extra_wheels = w - 2 * v; 
+            tw=extra_wheels/ 2;
             fw = v - tw;
         }
 
     cout<<"Two wheeler: "<<tw<<endl;
     cout<<"Four Wheeler: "<<fw<<endl;
+
+    return 0;
 }
