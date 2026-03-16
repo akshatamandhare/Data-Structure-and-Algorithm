@@ -13,11 +13,13 @@ int main(){
     cout<<"Enter inputs: ";
     getline(cin, s);
     stringstream ss(s);
-    vector<string>arr;
-
     string token;
     set<string>st;
     while( getline(ss, token, ',')){
+        while(token[0]==' ')
+        {
+            token.erase(0,1);
+        }
         st.insert(token);
     }
 
