@@ -12,7 +12,7 @@ int main(){
             cin>>grid[i][j];
         }
     }
-
+    // distance vector which store dist from src to each node
     vector<vector<int>>vis(n, vector<int>(m, -1));
 
     int delrow[]={-1, 0, +1, 0};
@@ -37,6 +37,8 @@ int main(){
             }
         }
     }
+
+    // return dist of the last node from distance vector
     cout<<"Output: "<<vis[n-1][m-1];
     return 0;
 }
