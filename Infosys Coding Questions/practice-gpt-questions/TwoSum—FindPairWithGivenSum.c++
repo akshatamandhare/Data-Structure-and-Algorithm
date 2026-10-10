@@ -14,7 +14,7 @@ vector<int> twoSum(vector<int>& arr, int k) {
         nums.push_back({arr[i], i});
     }
 
-    sort(arr.begin(), arr.end());
+    sort(nums.begin(), nums.end());
 
     while (right<n && left < right)
     {
