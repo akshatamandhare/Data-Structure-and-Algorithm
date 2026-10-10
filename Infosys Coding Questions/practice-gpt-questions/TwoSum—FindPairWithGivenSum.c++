@@ -4,25 +4,33 @@ using namespace std;
 vector<int> twoSum(vector<int>& arr, int k) {
     // Write your logic here
     int n=arr.size();
-    int i =0;
-    int j=1;
+    int left=0;
+    int right=n-1;
     int sum=0;
-    vector<int>ans;
-
-    while (j<n)
-    {
-        sum=arr[i]+arr[j];
-        if(sum>k){
-            sum-=arr[i];
-            i++;
-        }
-        if(sum==k){
-            ans.push_back(i);
-            ans.push_back(j);
-        }
-        j++;
+    int left_value = 0, right_value =0;
+    vector<pair<int, int>> nums;
+    // Store value and original index
+    for (int i = 0; i < n; i++) {
+        nums.push_back({arr[i], i});
     }
-    return ans;
+
+    sort(arr.begin(), arr.end());
+
+    while (right<n && left < right)
+    {
+        int sum = nums[left].first + nums[right].first;
+
+        if (sum == k) {
+            return {nums[left].second, nums[right].second};
+        }
+        else if (sum>k){
+            right--;
+        }
+        else if(sum<k){
+            left++;
+        }
+    }
+    return {-1, -1};
 }
 
 int main() {
