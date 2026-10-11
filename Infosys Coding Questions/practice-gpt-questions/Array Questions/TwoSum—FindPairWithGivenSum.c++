@@ -7,13 +7,14 @@ vector<int> twoSum(vector<int>& arr, int k) {
     int left=0;
     int right=n-1;
     int sum=0;
+    int left_value = 0, right_value =0;
     vector<pair<int, int>> nums;
     // Store value and original index
     for (int i = 0; i < n; i++) {
         nums.push_back({arr[i], i});
     }
 
-    sort(nums.begin(), nums.end());
+    sort(arr.begin(), arr.end());
 
     while (right<n && left < right)
     {
