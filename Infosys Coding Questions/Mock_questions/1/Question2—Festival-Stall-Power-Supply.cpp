@@ -25,7 +25,7 @@ int main(){
     int i=0, j=0, cnt=0;
     while (i<n && j<m)
     {
-        if(generators[i] >= stalls[i]){
+        if(generators[j] >= stalls[i]){
             cnt++;
             i++;
             j++;
