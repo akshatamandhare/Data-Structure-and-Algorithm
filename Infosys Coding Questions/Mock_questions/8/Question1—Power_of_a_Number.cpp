@@ -17,7 +17,7 @@ long long power(long long B, long long E) {
         return (result*B)%MOD;
     }
     else{
-        // even case
+        // odd case
         return result;
     }
 }

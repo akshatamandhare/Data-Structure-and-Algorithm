@@ -13,8 +13,8 @@ int main(){
         hash[P[i]]++;
     }
 
-   int minlen = INT_MAX;
-   int startinx =-1, right=0, left=0;
+    int minlen = INT_MAX;
+    int startinx =-1, right=0, left=0;
     int cnt=0;
 
     while(right<S.length()){
